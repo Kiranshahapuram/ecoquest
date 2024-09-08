@@ -1,0 +1,227 @@
+/* Reset and Base Styles */
+/* Reset and Base Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #1a1a1a;
+    color: #f4f4f4;
+    height: 100%;
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    flex-direction: column; /* Stack container1 and container2 vertically */
+}
+
+.home {
+    font-size: 18px;
+    margin: 10px;
+    text-align: right;
+}
+
+.home a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.home a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+		
+/* Container 1 - Top Section */
+.container1 {
+    width: 100vw;
+    height: 140px;
+    border: 5px solid #1e8449 ;
+    border-radius: 15px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    /*background: linear-gradient(145deg, #1c1c1c, #252525);*/
+    background:  #1e8449 ;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: right;
+    margin-bottom: 20px; /* Gap between container1 and container2 */
+    margin: 0 auto;
+}
+
+/* Container 2 - Bottom Section */
+.container2 {
+    width: 90vw;
+    height: 80vh;
+    border: 5px solid #1e8449 ;
+    border-radius: 15px;
+    padding: 20px;
+    box-sizing: border-box;
+    background: linear-gradient(145deg, #1c1c1c, #252525);
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+}
+
+/* Ensure both containers are aligned centrally */
+
+
+/* Rest of the styling remains the same */
+
+
+/* Logo Section */
+.logo {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.logo img {
+    max-width: 200px;
+    top: 30px;
+    height: auto;
+    filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.3));
+}
+
+.logo .no-fixed-logo{
+    position: absolute;
+    top: 0px;
+    padding-bottom: 5px;
+}
+
+/* Task Heading */
+.task-heading {
+    background-color:  #1e8449 ;
+    border-radius: 10px;
+    width: 50%;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.task-heading h3 {
+    margin: 0;
+    font-size: 2.5vw;
+    color: #ffffff;
+}
+
+/* Content Section */
+.content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+}
+
+/* Task Description */
+.task-body {
+    width: 45%;
+    padding: 20px;
+    background-color: #282828;
+    border-radius: 10px;
+    box-shadow: inset 0px 5px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: justify;
+}
+.task-body:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Image Section */
+.image {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.7);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95vw;
+        height: auto;
+        padding: 10px;
+    }
+    .task-heading h1 {
+        font-size: 5vw;
+    }
+    .content {
+        flex-direction: column;
+    }
+    .task-body, .image {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+.header-logo a 
+{
+    line-height: 10px;
+}
+
+.logo img,.logo svg 
+{
+    width: 190px;
+    height: auto;
+}
+
+.fixed-logo,
+.fixed-top .no-fixed-logo {
+    display: none;
+}
+
+.no-fixed-logo,
+.fixed-top .fixed-logo {
+    display: block;
+}
+
+
+/----- End Logo -----/
+.recycle{
+	width: 10px;
+	height: 100px;
+	display: block;
+}
+
+/----- Nav -----/
+
+.header-nav__main a,
+.header .slicknav_nav a {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+}
+
+.header-nav__main .nav .nav-link {
+    margin: 0 5px;
+    padding: 5px 0;
+}
+
+.header .navAnimateBorder .nav-link::before {
+    background-color: #ffffff;
+}
+
+.header.fixed-top .header-nav__main .nav .nav-link {
+    color: #444444!important;
+}
+
+.header.fixed-top .navAnimateBorder .nav-link::before {
+    background-color: #444444;
+}
+
+/----- End Nav -----/
+
+

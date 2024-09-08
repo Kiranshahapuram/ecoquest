@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoQuest - Login</title>
+    <link rel="stylesheet" href="loginstyle.css">
+	<link rel="icon" type="image/png" href="assets/images/white-logo.png">
+</head>
+<body>
+	<div class="logospace">
+		<a href="index.html">
+		<img class="no-fixed-logo" src="assets/images/white-logo.png" alt="logo">
+		</a>
+	</div>
+    <div class="container">
+        <div class="form-container">
+            <div class="toggle">
+                <button id="loginBtn" onclick="showLogin()">Login</button>
+                <button id="signupBtn" onclick="showSignup()">Signup</button>
+            </div>
+            
+            <!-- Login Form -->
+            <form id="loginForm" class="form active">
+                <h2>Login</h2>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+
+            <!-- Signup Form -->
+            <form id="signupForm" class="form">
+                <h2>Signup</h2>
+                <input type="text" placeholder="Username" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Signup</button>
+            </form>
+            <script>
+                async function submitLogin() {
+                    const form = document.getElementById('login-form');
+                    const formData = new FormData(form);
+        
+                    const data = {
+                        email: formData.get('email'),
+                        password: formData.get('password')
+                    };
+        
+                    try {
+                        const response = await fetch('/login', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify(data)
+                        });
+        
+                        const result = await response.json();
+                        alert(result.message);
+                    } catch (error) {
+                        console.error('Error:', error);
+                    }
+                }
+            </script>
+        </div>
+    </div>
+    
+      
+
+    <script>
+        function showLogin() {
+            document.getElementById('loginForm').classList.add('active');
+            document.getElementById('signupForm').classList.remove('active');
+        }
+
+        function showSignup() {
+            document.getElementById('signupForm').classList.add('active');
+            document.getElementById('loginForm').classList.remove('active');
+        }
+    </script>
+</body>
+</html>

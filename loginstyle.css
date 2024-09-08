@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #506d46;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.logospace{
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 40%;
+    height: auto;
+}
+
+.container {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    border-radius: 40px;
+    height: 500px;
+    width: 500px;
+    text-decoration: double;
+}
+
+.form-container {
+    text-align: center;
+}
+
+.toggle {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.toggle button {
+    background-color: #255d2a;
+    color: #fff;
+    font-size: medium;
+    border: none;
+    padding: 10px;
+    margin: 3px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 20px;
+    border-color: black;
+    transition: background-color 0.3s ease;
+}
+
+.toggle button:hover {
+    background-color: #258e36;
+}
+
+form {
+    display: none;
+}
+
+form.active {
+    display: block;
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    background-color: #255d2a;
+    color: #fff;
+    padding: 10px;
+    border: black;
+    border-radius: 20px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: larger;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838;
+}
